@@ -1,6 +1,6 @@
 import sqlite3
-#import clients
-kkk = 27
+from clients import worker, worker_1
+
 
 
 
@@ -10,8 +10,10 @@ cursor = connection.cursor()
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS Users (
     id INTEGER PRIMARY KEY,
-    username TEXT NOT NULL,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
     email TEXT NOT NULL,
+    phone INTAGER,
     age INTAGER    
     )
     
@@ -23,20 +25,26 @@ cursor.execute('''
 cur = cursor.execute('SELECT * FROM Users')
 users = cursor.fetchall()
 
-users_list = []
-for user in users:
-    user_dict ={
-        'id': user[0],
-        'username': user[1],
-        'email': user[2],
-        'age': user[3]
-        }
-users_list.append(user_dict)
-print(users_list)
-for i in users_list:
-    print(i)
+def dm_append():
+    worker
+    l_name = worker_1.go
+    f_name = worker_1.go_1
+    e_mail = worker_1.go_2
+    p_hone = worker_1.go_3
+    a_ge = worker_1.go_4
+    
     
     '''
+    l_name = input("Введите имя: ")
+    f_name = input("Введите фамилию: ")
+    e_mail = input("Введите почту: ")
+    p_hone = input("Введите номер: ")
+    a_ge = input("Введите возраст: ")
+    '''
+    cursor.execute('INSERT INTO Users (first_name, last_name, email, phone, age) VALUES (?, ?, ?, ?, ?)', (l_name, f_name, e_mail, p_hone, a_ge))
+
+dm_append()
+'''
 while True:
     say = input("Добавить нового работника?")
     if say == 'да':
