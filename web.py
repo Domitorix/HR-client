@@ -1,6 +1,6 @@
 import tkinter
 from tkinter import ttk
-from work import cur
+from work_db import cur
 
 root = tkinter.Tk()
 root.title('HR-client')

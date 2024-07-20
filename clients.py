@@ -1,6 +1,6 @@
 #21import main
 
-
+io = False
 
 
 class worker:
@@ -45,24 +45,24 @@ class worker:
         return worker_1.age
         
     
-        
-       
-    
-say_worker_1 = input("Введите имя: ")
-say_worker_2 = input("Введите фамилию: ")
-say_worker_3 = input("Введите почту: ")
-say_worker_4 = input("Введите номер: ")
-say_worker_5 = input("Введите возраст: ")     
-worker_1 = worker(say_worker_1, say_worker_2, say_worker_3, say_worker_4, say_worker_5)
+if io == True:
+    say_worker_1 = input("Введите имя: ")
+    say_worker_2 = input("Введите фамилию: ")
+    say_worker_3 = input("Введите почту: ")
+    say_worker_4 = input("Введите номер: ")
+    say_worker_5 = input("Введите возраст: ")     
+    worker_1 = worker(say_worker_1, say_worker_2, say_worker_3, say_worker_4, say_worker_5)
+else:
+    pass
 '''
+
 worker_1.p_first_name()
 worker_1.p_last_name()
 worker_1.p_email()
 worker_1.p_phone()
 worker_1.p_age()
 '''
-worker_1 = worker('ddd', 'gggg', 'tttt',5555, 95959)
-print(worker_1.go())
+
 
 
 #print(main.users)

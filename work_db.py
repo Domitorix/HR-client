@@ -1,6 +1,5 @@
 import sqlite3
-from clients import worker, worker_1
-
+#from clients import worker_1
 
 
 
@@ -24,26 +23,18 @@ cursor.execute('''
 #cursor.execute('INSERT INTO Users (username, email, age) VALUES (?, ?, ?)', ('newuser', 'newuser@example.com', 28))
 cur = cursor.execute('SELECT * FROM Users')
 users = cursor.fetchall()
-
+'''
 def dm_append():
-    worker
-    l_name = worker_1.go
-    f_name = worker_1.go_1
-    e_mail = worker_1.go_2
-    p_hone = worker_1.go_3
-    a_ge = worker_1.go_4
     
+    l_name = worker_1.first_name
+    f_name = worker_1.last_name
+    e_mail = worker_1.email
+    p_hone = worker_1.phone
+    a_ge = worker_1.age
     
-    '''
-    l_name = input("Введите имя: ")
-    f_name = input("Введите фамилию: ")
-    e_mail = input("Введите почту: ")
-    p_hone = input("Введите номер: ")
-    a_ge = input("Введите возраст: ")
-    '''
     cursor.execute('INSERT INTO Users (first_name, last_name, email, phone, age) VALUES (?, ?, ?, ?, ?)', (l_name, f_name, e_mail, p_hone, a_ge))
-
-dm_append()
+'''
+#dm_append()
 '''
 while True:
     say = input("Добавить нового работника?")
